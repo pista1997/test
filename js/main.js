@@ -2,7 +2,16 @@
 hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", function() {
     document.querySelector(".nav-bar").classList.toggle("active");
+    console.log("open");
 })
+
+navbar_items = document.querySelectorAll(".nav-bar ul li a");
+navbar_items.forEach(element => {
+  element.addEventListener("click", function() {
+    document.querySelector(".nav-bar").classList.remove("active");
+  })
+})
+
 //--------------------------------------------------------
 
 //Menu smooth scrolling
@@ -33,4 +42,17 @@ animated_obj.forEach((obj) => {
 })
 //-----------------------------------------------------------
 
+const cookieContainer = document.querySelector(".cookie-container");
+const cookieButton = document.querySelector(".cookie-btn");
 
+cookieButton.addEventListener("click", () => {
+  cookieContainer.classList.remove("active");
+  localStorage.setItem("cookieBannerDisplayed", "true")
+})
+
+setTimeout( () => {
+  if(!localStorage.getItem("cookieBannerDisplayed")) {
+    cookieContainer.classList.add("active");
+  }
+  
+}, 2000);

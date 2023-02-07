@@ -398,7 +398,7 @@ ul {
 }
 
  .contact .container {
-    padding: 1em 0 2em;
+    padding: 1em 0 1em;
  }
 
  .contact-content {
@@ -433,11 +433,16 @@ ul {
  }
 
  .contact-right p {
-    margin: 2em 0;
+    margin: 1.6em 0 2.5em;
  }
 
  .contact a {
     color: #fefefe;
+ }
+
+ #pp {
+    color: #979797;
+    font-size: 0.9em;
  }
  
  .contact i {
@@ -459,11 +464,66 @@ ul {
     font-size: 0.7em;
     line-height: 1.4em;
     
-    padding: 2.5em 0 0.5em;
+    padding: 3em 0 0.8em;
+    
+ }
+
+ /* COOKIES */
+ .cookie-container {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #2f3640;
+    color: #fefefe;
+    padding: 0 2rem;
+    transition: 400ms;
+    opacity: 0.98;
+    box-shadow: 0 -2px 16px #2f364076;
+ }
+
+ .cookie-container.active {
+    bottom: 0;
+ }
+
+ .cookie-container p {
+    margin: 1.5em 0 1em;
+    line-height: 2;
+ }
+
+ .cookie-container a {
+    color: #fefefe;
+    text-decoration: underline;
+ }
+
+ .cookie-btn {
+    background-color: #e91e3a;
+    border: 0;
+    color: #fefefe;
+    padding: .75em 2em;
+    font-size: 1.125em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+ }
+
+ .cookies-page {
+    margin-top: 4.75rem;
  }
 
 /* MEDIA QUERIES */
-@media only screen and ( max-width: 1260px ) {
+@media only screen and ( min-width: 1460px ) {
+    .cookie-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .cookie-btn {
+        margin: 1em;
+    }
+}
+
+@media only screen and ( max-width: 1270px ) {
     /* .container-header, .container {
         max-width: 1120px;
     } */
@@ -533,6 +593,7 @@ ul {
         order: 2;
     }
 
+
     #gmap_canvas {
         height: 20em;
     }
@@ -553,7 +614,7 @@ ul {
     .nav-bar {
         height: 0;
         position: absolute;
-        top: 80px;
+        top: 75px;
         left: 0;
         right: 0;
         width: 100vw;
@@ -636,7 +697,11 @@ ul {
     }
 
     .contact-right p {
-        margin: 1em 0;
+        margin: 0.8em 0 1.6em;
+    }
+
+    .contact-right h4 {
+        margin-bottom: 0;
     }
 
     
@@ -676,6 +741,11 @@ ul {
         
     }
 
+    .contact-left,
+    .contact-right {
+        padding: 0.5em 1.2em
+    }
+
 }
 
 @media only screen and ( max-width: 420px ) {
@@ -695,6 +765,12 @@ ul {
     .banner h1 {
         font-size: 2em;
     }
+
+    .contact-right p {
+        font-size: 0.9em;
+    }
+
+    
 }
 
 @media only screen and ( max-width: 350px ) {
