@@ -291,9 +291,9 @@ ul {
     margin-right: 2%;
 }
 
-.card:nth-child(4)  {
+.card:nth-child(4),
+.card:nth-child(5)  {
     text-align: center;
-    margin-left: 17%;
     margin-right: 2%;
 }
 
@@ -480,6 +480,7 @@ ul {
     transition: 400ms;
     opacity: 0.98;
     box-shadow: 0 -2px 16px #2f364076;
+    z-index: 100;
  }
 
  .cookie-container.active {
@@ -513,6 +514,7 @@ ul {
 
 /* MEDIA QUERIES */
 @media only screen and ( min-width: 1460px ) {
+    
     .cookie-container {
         display: flex;
         justify-content: space-evenly;
@@ -524,9 +526,6 @@ ul {
 }
 
 @media only screen and ( max-width: 1270px ) {
-    /* .container-header, .container {
-        max-width: 1120px;
-    } */
 
     .cards {
         margin: 0 auto;
@@ -556,23 +555,17 @@ ul {
     }
     
     .card:nth-child(2),
-    .card:nth-child(4) {
+    .card:nth-child(4),
+    .card:nth-child(6) {
         margin-right: 0;
         margin-left: 0;
     }
     .card:nth-child(1),
-    .card:nth-child(3) {
+    .card:nth-child(3),
+    .card:nth-child(5) {
         margin-right: 2%;
     }
-    
-    .card:nth-child(5)  {
-        margin-left: 25.5%;
-        margin-right: 25.5%;
-    }
-
 }
-
-
 
 @media only screen and ( max-width: 935px ) {
     .banner h1 {
@@ -592,7 +585,6 @@ ul {
     .contact-left {
         order: 2;
     }
-
 
     #gmap_canvas {
         height: 20em;
@@ -680,7 +672,8 @@ ul {
     .card:nth-child(2), 
     .card:nth-child(3), 
     .card:nth-child(4), 
-    .card:nth-child(5) {
+    .card:nth-child(5),
+    .card:nth-child(6) {
         float: left;
         width: 100%;
         margin-left: 0;
